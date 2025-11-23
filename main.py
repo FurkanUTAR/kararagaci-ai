@@ -8,6 +8,10 @@ import uvicorn
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"status": "ok"}
+
 # Modeli yükle
 model = joblib.load("model.joblib")
 
